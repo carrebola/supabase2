@@ -39,8 +39,8 @@ export const pintaTablaUsuarios = async ()=>{
             <td>${elemento.id}</td>
             <td>${elemento.nombre}</td>
             <td>${elemento.email}</td>
-            <td><img src="/icons/edit-2.svg"></td>
-            <td><img src="/icons/trahs-2.svg"></td>
+            <td><img src="./icons/edit-2.svg"></td>
+            <td><img src="./icons/trash-2.svg"></td>
         </tr>
         `
     });
@@ -49,5 +49,5 @@ export const pintaTablaUsuarios = async ()=>{
         </tbody>
     </table>
     `
-    return tabla
+    document.querySelector('#tabla-usuarios').innerHTML = tabla
 }

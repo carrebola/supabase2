@@ -4,7 +4,6 @@ export const usuarios = {
         let { data: users, error } = await supabase
         .from('users')
         .select('*')
-        console.log(users, error);
         return users
     },
     insertar : async (usuario)=>{

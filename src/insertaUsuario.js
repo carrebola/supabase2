@@ -8,5 +8,4 @@ export const insertaUsuario = async () =>{
         email: form_registro.email.value
     }
     await usuarios.insertar(usuario)
-    console.log(usuario, 'insertado');
 }

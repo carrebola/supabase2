@@ -10,6 +10,10 @@
 <body class="container-fluid">
     <header>
         <h1 class="text-center bg-dark text-light p-2">Supabase</h1>
+        <div class="m-2">Bienvenido: 
+            <span id="usuarioLogeado"></span>
+            <button class="btn btn-sm btn-primary ms-3" id="btn-logout">Logout</button>
+        </div>
     </header>
     <main class="">
         <div class="row">
@@ -19,8 +23,8 @@
                     <div class="card-header"><h3>Login</h3></div>
                     <div class="card-body">
                         <form id="form-login" class="form" action="">
-                            <input type="email" class="form-control mt-2" placeholder="email">
-                            <input type="password" class="form-control mt-2" placeholder="Contraseña">
+                            <input name="email" type="email" class="form-control mt-2" placeholder="email">
+                            <input name="password" type="password" class="form-control mt-2" placeholder="Contraseña">
                             <button id="btn-login" class="btn btn-primary mt-4 w-100">Enviar</button>
                         </form>
                     </div>

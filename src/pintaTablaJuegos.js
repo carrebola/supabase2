@@ -24,7 +24,7 @@ export const pintaTablaJuegos = async ()=>{
             <td>${elemento.nombre}</td>
             <td>${elemento.descripcion}</td>
             <td><img src="/icons/edit-2.svg"></td>
-            <td><img src="/icons/trahs-2.svg"></td>
+            <td><img src="/icons/trash-2.svg"></td>
         </tr>
         `
     });
