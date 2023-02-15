@@ -1,5 +1,6 @@
 import { supabase } from "./bd/supabase";
 import { usuarios } from "./bd/usuarios";
+import { pintaUsuarioLogeado } from "./pintaUsuarioLogeado";
 
 export const login = async () =>{
   const form_login = document.querySelector('#form-login');
@@ -8,6 +9,9 @@ export const login = async () =>{
       email: form_login.email.value
   }
  
-    const user = await usuarios.logear(usuario)
-    console.log('El email del user logeado es: ', user)
+    const user = await usuarios.login(usuario)
+    await pintaUsuarioLogeado()
+    if(!user){
+      alert('no puedo logearme')
+    }
 }

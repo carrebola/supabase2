@@ -35,13 +35,11 @@ document.querySelector('#form-juego').addEventListener('submit', async (e)=>{
 document.querySelector('#form-login').addEventListener('submit', async (e)=>{
     e.preventDefault()
     await login()
-    console.log('logeando');
 });
 
 //logout
 document.querySelector('#btn-logout').addEventListener('click', async (e)=>{
     await logout()
-    console.log('deu');
 });
 
 

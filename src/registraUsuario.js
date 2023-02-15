@@ -10,6 +10,5 @@ export const registraUsuario = async () =>{
   }
   const user = await usuarios.registrar(usuario)
   usuario.id = user.id
-  console.log('usuario para insertar: ', usuario);
   await usuarios.insertar(usuario)
 }

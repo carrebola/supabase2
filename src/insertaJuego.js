@@ -7,5 +7,4 @@ export const insertaJuego = async () =>{
         descripcion: form_juego.descripcion.value,
     }
     await juegos.insertar(juego)
-    console.log(juego, 'insertado');
 }

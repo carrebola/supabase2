@@ -12,7 +12,7 @@
         <h1 class="text-center bg-dark text-light p-2">Supabase</h1>
         <div class="m-2">Bienvenido: 
             <span id="usuarioLogeado"></span>
-            <button class="btn btn-sm btn-primary ms-3" id="btn-logout">Logout</button>
+            <button class="btn btn-sm btn-primary ms-3 d-none" id="btn-logout">Logout</button>
         </div>
     </header>
     <main class="">
@@ -54,7 +54,7 @@
                         <form id="form-juego" class="form" action="">
                             <input type="text" class="form-control mt-2" placeholder="Nombre" name="nombre">
                             <textarea name="descripcion" class="form-control mt-2" id="descripcion" rows="3">Descripción del juego</textarea>
-                            <button id="btn-registro" class="btn btn-success mt-4 w-100">Enviar</button>
+                            <button id="btn-insertarJuego" class="btn btn-success mt-4 w-100">Enviar</button>
                         </form>
                     </div>
                 </div>

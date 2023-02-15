@@ -2,8 +2,19 @@ import { usuarios } from "./bd/usuarios.js";
 
 export const pintaUsuarioLogeado = async ()=> {
     
-    const email = await usuarios.leerUsuarioLogeado().email || 'anónimo'
+    const user = await usuarios.leerUsuarioLogeado()
+    let email = 'anonimo'
+    if(user) {
+         email = user.email
+         document.querySelector('#btn-logout').classList.remove('d-none');
+     }
+     else{
+        document.querySelector('#btn-logout').classList.add('d-none');
+
+     }
+     
     document.querySelector('#usuarioLogeado').innerHTML = email
+    
 
 }
 

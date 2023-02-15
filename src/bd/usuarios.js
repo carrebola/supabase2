@@ -31,13 +31,14 @@ export const usuarios = {
             console.log('error de registro: ',error);
         }
     },
-    logear: async (usuario)=>{
+    login: async (usuario)=>{
         try {
             let { data, error } = await supabase.auth.signInWithPassword({
                 email: usuario.email,
                 password: usuario.contraseña
             })
             console.log('login ok: ',data.user);
+            return data.user.email
         } catch (error) {
             console.log('error al logear en la bd', error);
         }
@@ -53,9 +54,10 @@ export const usuarios = {
     leerUsuarioLogeado: async () => {
         try {
             const { data: { user } } = await supabase.auth.getUser()
+            console.log('user logeadao', user);
             return user
         } catch (error) {
-            
+            console.log('error al leer usuario logeado de la bd', error);
         }
     }
     

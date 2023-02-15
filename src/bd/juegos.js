@@ -4,7 +4,6 @@ export const juegos = {
         let { data: data, error } = await supabase
         .from('juegos')
         .select('*')
-        console.log(data, error);
         return data
     },
     insertar : async (juego)=>{
