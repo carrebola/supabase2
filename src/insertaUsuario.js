@@ -7,6 +7,6 @@ export const insertaUsuario = async () =>{
         contraseña: form_registro.password.value,
         email: form_registro.email.value
     }
-    await usuarios.insertarUsuario(usuario)
+    await usuarios.insertar(usuario)
     console.log(usuario, 'insertado');
 }

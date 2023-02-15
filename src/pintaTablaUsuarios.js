@@ -18,7 +18,7 @@ export const pintaTablaUsuarios = async ()=>{
     // ]
 
 
-    const users = await usuarios.leerUsuarios()
+    const users = await usuarios.leer()
 
     let tabla = `
     <table id="tabla-usuarios" class="table">
@@ -27,6 +27,8 @@ export const pintaTablaUsuarios = async ()=>{
                 <th>Id</th>
                 <th>Nombre</th>
                 <th>Email</th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -37,6 +39,8 @@ export const pintaTablaUsuarios = async ()=>{
             <td>${elemento.id}</td>
             <td>${elemento.nombre}</td>
             <td>${elemento.email}</td>
+            <td><img src="/icons/edit-2.svg"></td>
+            <td><img src="/icons/trahs-2.svg"></td>
         </tr>
         `
     });
