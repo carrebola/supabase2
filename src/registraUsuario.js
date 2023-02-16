@@ -1,5 +1,6 @@
 import { supabase } from "./bd/supabase";
 import { usuarios } from "./bd/usuarios";
+import { pintaTablaUsuarios } from "./pintaTablaUsuarios";
 
 export const registraUsuario = async () =>{
   const form_registro = document.querySelector('#form-registro');
@@ -11,4 +12,5 @@ export const registraUsuario = async () =>{
   const user = await usuarios.registrar(usuario)
   usuario.id = user.id
   await usuarios.insertar(usuario)
+  pintaTablaUsuarios()
 }

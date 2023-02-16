@@ -3,7 +3,6 @@ export const pintaTablaJuegos = async ()=>{
 
    
     const data = await juegos.leer()
-
     let tabla = `
     <table id="tabla-juegos" class="table">
         <thead>
@@ -33,5 +32,6 @@ export const pintaTablaJuegos = async ()=>{
         </tbody>
     </table>
     `
-    return tabla
+    document.querySelector('#tabla-juegos').innerHTML = tabla
+
 }

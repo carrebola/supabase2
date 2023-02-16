@@ -3,6 +3,7 @@ import { pintaTablaUsuarios } from "./pintaTablaUsuarios.js";
 import { pintaTablaJuegos } from "./pintaTablaJuegos.js";
 import { pintaUsuarioLogeado } from "./pintaUsuarioLogeado.js";
 import { insertaUsuario } from "./insertaUsuario.js";
+import { insertaJuego } from "./insertaJuego.js";
 import { registraUsuario } from "./registraUsuario.js";
 import { login } from "./login.js";
 import { logout } from "./logout.js";
@@ -12,8 +13,7 @@ import { logout } from "./logout.js";
 //pintamos tabla usuarios con los usuarios de la bd
 pintaTablaUsuarios()
 //pintamos la tabla juegos
-document.querySelector('#tabla-juegos').innerHTML = await pintaTablaJuegos();
-
+pintaTablaJuegos();
 //pintamos el usuario logeado
 pintaUsuarioLogeado()
 
@@ -28,7 +28,7 @@ document.querySelector('#form-juego').addEventListener('submit', async (e)=>{
     e.preventDefault()
     await insertaJuego()
     //pintamos tabla juegos con los juegos de la bd
-    document.querySelector('#tabla-juegos').innerHTML = await pintaTablaJuegos();
+    await pintaTablaJuegos();
 });
 
 //login
