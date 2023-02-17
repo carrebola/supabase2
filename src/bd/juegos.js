@@ -7,11 +7,16 @@ export const juegos = {
         return data
     },
     insertar : async (juego)=>{
-        const { data, error } = await supabase
-        .from('juegos')
-        .insert([
-          { nombre: juego.nombre, descripcion: juego.descripcion},
-        ])
+        try {
+            const { data, error } = await supabase
+            .from('juegos')
+            .insert([
+                { nombre: juego.nombre, descripcion: juego.descripcion},
+            ])
+            return {data, error}
+        } catch (error) {
+            return {data, error}
+        }
       
     }
 }

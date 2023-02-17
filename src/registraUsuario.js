@@ -12,5 +12,6 @@ export const registraUsuario = async () =>{
   const user = await usuarios.registrar(usuario)
   usuario.id = user.id
   await usuarios.insertar(usuario)
+  console.log('usuario insertado?');
   pintaTablaUsuarios()
 }

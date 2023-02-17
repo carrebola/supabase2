@@ -52,7 +52,22 @@
                     <div class="card-header"><h3>Juegos</h3></div>
                     <div class="card-body">
                         <form id="form-juego" class="form" action="">
-                            <input type="text" class="form-control mt-2" placeholder="Nombre" name="nombre">
+                            <input required type="text" class="form-control mt-2" placeholder="Nombre" name="nombre">
+                            <textarea name="descripcion" class="form-control mt-2" id="descripcion" rows="3">Descripción del juego</textarea>
+                            <button id="btn-insertarJuego" class="btn btn-success mt-4 w-100">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Insertar comentarios -->
+            <div class="col-4" id="">
+                <div class="card shadow ">
+                    <div class="card-header"><h3>Comentarios</h3></div>
+                    <div class="card-body">
+                        <form id="form-juego" class="form" action="">
+                            <input required type="text" class="form-control mt-2" placeholder="Nombre" name="nombre">
                             <textarea name="descripcion" class="form-control mt-2" id="descripcion" rows="3">Descripción del juego</textarea>
                             <button id="btn-insertarJuego" class="btn btn-success mt-4 w-100">Enviar</button>
                         </form>
@@ -139,6 +154,17 @@
         
     </main>
     <footer></footer>
+
+    <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body">
+            Hello, world! This is a toast message.
+          </div>
+          <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+
+
     <script src="main.js" type="module"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>

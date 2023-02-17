@@ -6,5 +6,16 @@ export const insertaJuego = async () =>{
         nombre: form_juego.nombre.value,
         descripcion: form_juego.descripcion.value,
     }
-    await juegos.insertar(juego)
+    const res = await juegos.insertar(juego)
+    console.log('data',res.data);
+    console.log('error',res.error);
+    if(res.error){
+        alert('No se ha podio insertar el juego. No tienes permisos')
+    }
+    else{
+        console.log('juego insertado')
+    }
+    
+    
+    
 }

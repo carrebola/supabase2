@@ -28,6 +28,7 @@ export const pintaTablaUsuarios = async ()=>{
                 <th>Nombre</th>
                 <th>Email</th>
                 <th>Rol</th>
+                <th>Estado</th>
                 <th></th>
                 <th></th>
             </tr>
@@ -41,6 +42,7 @@ export const pintaTablaUsuarios = async ()=>{
             <td>${elemento.nombre}</td>
             <td>${elemento.email}</td>
             <td>${elemento.rol}</td>
+            <td>${elemento.estado}</td>
             <td><img src="./icons/edit-2.svg"></td>
             <td><img src="./icons/trash-2.svg"></td>
         </tr>
