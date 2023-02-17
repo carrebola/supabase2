@@ -1,17 +1,20 @@
 import { supabase } from "./supabase.js";
-export const usuarios = {
+export const comentarios = {
     leer : async ()=>{
-        let { data: users, error } = await supabase
-        .from('users')
+        let { data: comentarios, error } = await supabase
+        .from('comentarios')
         .select('*')
-        return users
+        console.log('comentarios con todo', comentarios);
+        return comentarios
     },
-    insertar : async (usuario)=>{
+    insertar : async (comentario)=>{
         const { data, error } = await supabase
-        .from('users')
+        .from('comentarios')
         .insert([
-          { nombre: usuario.nombre, contraseña: usuario.contraseña, email: usuario.email },
+          { comentario: comentario.texto, juego_id: comentario.juegoId, usuario_id: comentario.usuarioId},
         ])
+        return {data, error}
       
-    }
+    }, 
+   
 }

@@ -7,9 +7,18 @@ export const pintaUsuarioLogeado = async ()=> {
     if(user) {
          email = user.email
          document.querySelector('#btn-logout').classList.remove('d-none');
+        
+         document.querySelector('#home').classList.add('d-none');
+         document.querySelector('#admin').classList.remove('d-none');
+
+
      }
      else{
         document.querySelector('#btn-logout').classList.add('d-none');
+        document.querySelector('#col-login').classList.remove('d-none');
+        document.querySelector('#home').classList.remove('d-none');
+        document.querySelector('#admin').classList.add('d-none');
+
 
      }
      

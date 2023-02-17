@@ -6,7 +6,13 @@ export const usuarios = {
         .select('*')
         return users
     },
-    insertar : async (usuario)=>{
+    leerId : async (id)=>{
+        let { data: users, error } = await supabase
+        .from('usuarios')
+        .select('*')
+        .eq('id', id)
+        return users
+    },    insertar : async (usuario)=>{
         try {
             const { data, error } = await supabase
             .from('usuarios')
@@ -56,6 +62,19 @@ export const usuarios = {
             const { data: { user } } = await supabase.auth.getUser()
             console.log('user logeadao', user);
             return user
+        } catch (error) {
+            console.log('error al leer usuario logeado de la bd', error);
+        }
+    },
+    leerUsuarioLogeadoId: async (uuid) => {
+        try {
+            let { data: data, error } = await supabase
+            .from('usuarios')
+            .select('id')
+            .match({usuario_id: uuid})
+            console.log(data);
+            return data[0].id
+           
         } catch (error) {
             console.log('error al leer usuario logeado de la bd', error);
         }
