@@ -10,12 +10,5 @@ const supabaseKey = API_KEY
 const supabase = createClient(supabaseUrl, supabaseKey)
 
 
-//Registro de usuario en supabase
-let { data, error } = await supabase.auth.signUp({
-    email: 'carrebola@fpllefia.com',
-    password: 'asdfasdf'
-})
-console.log(data, error);
-
 
 export { supabase }
