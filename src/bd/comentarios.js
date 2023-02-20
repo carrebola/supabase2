@@ -14,7 +14,12 @@ export const comentarios = {
           { comentario: comentario.texto, juego_id: comentario.juegoId, usuario_id: comentario.usuarioId},
         ])
         return {data, error}
-      
     }, 
+    leerDetalle : async ()=>{
+        //Lee la tabla comentarios con nombre de usuario y nombre de juego
+        const { data, error } = await supabase.rpc('comentarios')
+        console.log('comentarios detalle',data);
+        return data
+    },
    
 }

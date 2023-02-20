@@ -2,6 +2,7 @@
 import { pintaTablaUsuarios } from "./pintaTablaUsuarios.js";
 import { pintaTablaJuegos } from "./pintaTablaJuegos.js";
 import { pintaTablaComentarios } from "./pintaTablaComentarios.js";
+import { pintaTablaComentariosDetalle } from "./pintaTablaComentariosDetalle.js";
 import { pintaUsuarioLogeado } from "./pintaUsuarioLogeado.js";
 import { pintaSelectJuegos } from "./pintaSelectJuegos.js";
 import { insertaUsuario } from "./insertaUsuario.js";
@@ -13,6 +14,7 @@ import { logout } from "./logout.js";
 
 
 
+
 //pintamos tabla usuarios con los usuarios de la bd
 pintaTablaUsuarios()
 //pintamos la tabla juegos
@@ -20,7 +22,7 @@ pintaTablaJuegos();
 //pintamos el usuario logeado
 pintaUsuarioLogeado()
 //pintamos la tabla de comentarios
-pintaTablaComentarios()
+pintaTablaComentariosDetalle()
 
 //pintamos la lista de juegos en select
 pintaSelectJuegos()

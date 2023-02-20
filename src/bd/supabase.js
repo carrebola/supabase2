@@ -9,4 +9,8 @@ const supabaseUrl = 'https://mmahdrxsfevbwhcivfzl.supabase.co'
 const supabaseKey = API_KEY
 const supabase = createClient(supabaseUrl, supabaseKey)
 
+
+
+
+
 export { supabase }

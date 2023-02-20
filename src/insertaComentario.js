@@ -12,7 +12,7 @@ export const insertaComentario = async () =>{
     } 
     console.log('usuarioLogeado', uuid);
 
-    const userId =  await usuarios.leerUsuarioLogeadoId(uuid)
+    const userId =  await usuarios.leerUsuarioRegistradoId(uuid)
     const comentario = {
         usuarioId: userId,
         juegoId: formComentarios.juego.value,

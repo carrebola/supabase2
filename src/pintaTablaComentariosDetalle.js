@@ -1,15 +1,16 @@
 import { comentarios } from "./bd/comentarios";
-export const pintaTablaComentarios = async ()=>{
+export const pintaTablaComentariosDetalle = async ()=>{
 
    
-    const data = await comentarios.leer()
+    const data = await comentarios.leerDetalle()
+    console.log(data);
     let tabla = `
     <table id="tabla-juegos" class="table">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>ID juego</th>
-                <th>ID usuario</th>
+                <th>Juego</th>
+                <th>Usuario</th>
                 <th>Comentario</th>
                 <th></th>
                 <th></th>
@@ -21,8 +22,8 @@ export const pintaTablaComentarios = async ()=>{
         tabla+=`
         <tr>
             <td>${elemento.id}</td>
-            <td>${elemento.juego_id}</td>
-            <td>${elemento.usuario_id}</td>
+            <td>${elemento.juegos}</td>
+            <td>${elemento.nombre}</td>
             <td>${elemento.comentario}</td>
             <td><img src="/icons/edit-2.svg"></td>
             <td><img src="/icons/trash-2.svg"></td>
