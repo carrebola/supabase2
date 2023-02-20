@@ -9,9 +9,15 @@ export const registraUsuario = async () =>{
       contraseña: form_registro.password.value,
       email: form_registro.email.value
   }
-  const user = await usuarios.registrar(usuario)
-  usuario.id = user.id
+  try {
+    console.log(usuario);
+    const { data, error } = await usuarios.registrar(usuario)
+  usuario.id = data.user.id
   await usuarios.insertar(usuario)
   console.log('usuario insertado?');
   pintaTablaUsuarios()
+  } catch (error) {
+    console.log('error al insertar', error.message);
+  }
+  
 }

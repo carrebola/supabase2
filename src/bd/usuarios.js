@@ -28,17 +28,14 @@ export const usuarios = {
     },
     //Registra en users el usuario con los datos del objeto **usuario**
     registrar: async (usuario)=>{ 
-        try {
+        
             //Registro de usuario en supabase
             let { data, error } = await supabase.auth.signUp({
                 email: usuario.email,
                 password: usuario.contraseña
             })
-            console.log('registrado el usuario en supabase: ', data);
-            return data.user
-        } catch (error) {
-            console.log('error de registro: ',error);
-        }
+            console.log(data, error);
+            return {data,error}
     },
     //Login del usuario que le pasamos {email, contraseña}	
     login: async (usuario)=>{
